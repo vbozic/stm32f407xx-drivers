@@ -223,4 +223,10 @@ typedef struct
 #define UART5_PCLK_DI()			(RCC->APB1ENR &= ~(1 << 20))
 #define USART6_PCLK_DI()		(RCC->APB2ENR &= ~(1 << 5))
 
+/*
+ * Clock disable Macro for SYSCFG peripheral
+ */
+
+#define SYSCFG_PCLK_DI()		(RCC->APB2ENR &= ~(1 << 14))
+
 #endif /* INC_STM32F407XX_H_ */

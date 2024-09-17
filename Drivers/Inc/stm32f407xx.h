@@ -18,4 +18,14 @@
 #define ROM_BASEADDR						0x1FFF0000U
 #define SRAM								SRAM1_BASEADDR
 
+/*
+ * AHPx and APBx Bus Peripheral base addresses
+ */
+
+#define PERIPH_BASE							0x40000000U
+#define APB1_PERIPH_BASE					PERIPH_BASE
+#define APB2_PERIPH_BASE					0x40010000U
+#define AHB1_PERIPH_BASE					0x40020000U
+#define AHB2_PERIPH_BASE					0x50000000U
+
 #endif /* INC_STM32F407XX_H_ */

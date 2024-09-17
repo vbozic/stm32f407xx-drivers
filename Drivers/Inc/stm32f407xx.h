@@ -212,4 +212,15 @@ typedef struct
 #define SPI2_PCLK_DI()			(RCC->APB1ENR &= ~(1 << 14))
 #define SPI3_PCLK_DI()			(RCC->APB1ENR &= ~(1 << 15))
 
+/*
+ * Clock disable Macros for USARTx peripherals
+ */
+
+#define USART1_PCLK_DI()		(RCC->APB2ENR &= ~(1 << 4))
+#define USART2_PCLK_DI()		(RCC->APB1ENR &= ~(1 << 17))
+#define USART3_PCLK_DI()		(RCC->APB1ENR &= ~(1 << 18))
+#define UART4_PCLK_DI()			(RCC->APB1ENR &= ~(1 << 19))
+#define UART5_PCLK_DI()			(RCC->APB1ENR &= ~(1 << 20))
+#define USART6_PCLK_DI()		(RCC->APB2ENR &= ~(1 << 5))
+
 #endif /* INC_STM32F407XX_H_ */

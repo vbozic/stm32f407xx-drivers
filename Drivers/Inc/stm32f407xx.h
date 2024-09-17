@@ -149,4 +149,12 @@ typedef struct
 #define GPIOH_PCLK_EN()			(RCC->AHB1ENR |= (1 << 7))
 #define GPIOI_PCLK_EN()			(RCC->AHB1ENR |= (1 << 8))
 
+/*
+ * Clock enable Macros for I2Cx peripherals
+ */
+
+#define I2C1_PCLK_EN()			(RCC->APB1ENR |= (1 << 21))
+#define I2C2_PCLK_EN()			(RCC->APB1ENR |= (1 << 22))
+#define I2C3_PCLK_EN()			(RCC->APB1ENR |= (1 << 23))
+
 #endif /* INC_STM32F407XX_H_ */

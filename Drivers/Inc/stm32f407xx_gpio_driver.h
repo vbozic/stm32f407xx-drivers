@@ -56,6 +56,32 @@ typedef struct
 #define GPIO_MODE_IT_RT					5			// Rising edge
 #define GPIO_MODE_IT_RFT				6			// Rising and falling edge
 
+/*
+ * @GPIO_PIN_OP_TYPE
+ * GPIO pin possible output types
+ */
+
+#define GPIO_OP_TYPE_PP					0			// push-pull
+#define GPIO_OP_TYPE_OD					1			// open drain
+
+/*
+ * @GPIO_PIN_SPEED
+ * GPIO pin possible output speeds
+ */
+
+#define GPIO_SPEED_LOW					0
+#define GPIO_SPEED_MEDIUM				1
+#define GPIO_SPEED_FAST					2
+#define GPIO_SPEED_HIGH					3
+
+/*
+ * @GPIO_PIN_PUPD
+ * GPIO pin pull-up and pull down macros
+ */
+
+#define GPIO_PIN_NO_PUPD				0
+#define GPIO_PIN_PU						1
+#define GPIO_PIN_PD						2
 
 /*
  * A handle structure for a GPIO pin

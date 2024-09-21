@@ -100,8 +100,8 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 	{
 		// non interrupt mode
 		temp = ( pGPIOHandle->GPIO_PinConfig.GPIO_PinMode << (2 * pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber) );
-		pGPIOHandle->pGPIOx->OSPEEDR &= ~(0x3 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);						// clear specific bits in register
-		pGPIOHandle->pGPIOx->OSPEEDR |= temp;																		// set specific bits in register
+		pGPIOHandle->pGPIOx->MODER &= ~(0x3 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);						// clear specific bits in register
+		pGPIOHandle->pGPIOx->MODER |= temp;																		// set specific bits in register
 	}else
 	{
 		// interrupt mode
@@ -111,8 +111,8 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 
 	// 2. Configure the speed
 	temp = ( pGPIOHandle->GPIO_PinConfig.GPIO_PinSpeed << (2 * pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber) );
-	pGPIOHandle->pGPIOx->MODER &= ~( 0x3 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
-	pGPIOHandle->pGPIOx->MODER |= temp;
+	pGPIOHandle->pGPIOx->OSPEEDR &= ~( 0x3 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+	pGPIOHandle->pGPIOx->OSPEEDR |= temp;
 	temp = 0;
 
 	// 3. Configure the pupd settings

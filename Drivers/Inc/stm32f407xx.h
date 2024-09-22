@@ -86,6 +86,9 @@ typedef struct
 	__vo uint32_t AFR[2];						/* 0x20 AFR[0] GPIO alternate function low register & 0x24 GPIO alternate function high register */
 } GPIO_RegDef_t;
 
+/*
+ * Peripheral definition structure for RCC
+ */
 typedef struct
 {
 	__vo uint32_t CR;							/* 0x00 */

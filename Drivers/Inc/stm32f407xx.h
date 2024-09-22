@@ -166,6 +166,7 @@ typedef struct
 #define RCC									((RCC_RegDef_t*)RCC_BASEADDR)
 
 #define EXTI								((RCC_RegDef_t*)EXTI_BASEADDR)
+#define EXTI								((EXTI_RegDef_t*)EXTI_BASEADDR)
 
 /*
  * Clock enable Macros for GPIOx peripherals

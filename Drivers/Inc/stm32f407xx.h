@@ -134,6 +134,21 @@ typedef struct
 	__vo uint32_t SWIER;						/* Address offset 0x10 */
 	__vo uint32_t PR;							/* Address offset 0x14 */
 }EXTI_RegDef_t;
+
+/*
+ * Peripheral definition structure for SYSCFG
+ */
+typedef struct
+{
+	__vo uint32_t MEMRMP;						/* Address offset 0x00 */
+	__vo uint32_t PMC;							/* Address offset 0x04 */
+	__vo uint32_t EXTICR1;						/* Address offset 0x08 */
+	__vo uint32_t EXTICR2;						/* Address offset 0x0C */
+	__vo uint32_t EXTICR3;						/* Address offset 0x10 */
+	__vo uint32_t EXTICR4;						/* Address offset 0x14 */
+	__vo uint32_t CMPCR;						/* Address offset 0x14 */
+}SYSCFG_RegDef_t;
+
 /*
  * Peripheral definitions (Peripheral base address typecasted to xxx_RegDef_t)
  */

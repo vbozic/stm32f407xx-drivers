@@ -142,11 +142,11 @@ typedef struct
 {
 	__vo uint32_t MEMRMP;						/* Address offset 0x00 */
 	__vo uint32_t PMC;							/* Address offset 0x04 */
-	__vo uint32_t EXTICR1;						/* Address offset 0x08 */
-	__vo uint32_t EXTICR2;						/* Address offset 0x0C */
-	__vo uint32_t EXTICR3;						/* Address offset 0x10 */
-	__vo uint32_t EXTICR4;						/* Address offset 0x14 */
-	__vo uint32_t CMPCR;						/* Address offset 0x14 */
+	__vo uint32_t EXTICR[4];					/* Address offset 0x08 - 0x14 */
+	uint32_t 	  RESERVED1[2];					/* Address offset 0x18 - 0x1C */
+	__vo uint32_t CMPCR;						/* Address offset 0x20 */
+	uint32_t 	  RESERVED2[2];					/* Address offset 0x24 - 0x28 */
+	__vo uint32_t CFGR;							/* Address offset 0x2C */
 }SYSCFG_RegDef_t;
 
 /*

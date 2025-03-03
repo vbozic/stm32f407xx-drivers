@@ -119,6 +119,16 @@ typedef struct
 	__vo uint32_t PLLI2SCFGR;					/* 0x84 */
 } RCC_RegDef_t;
 
+typedef struct
+{
+	__vo uint32_t IMR;							/* 0x00 Interrupt mask register */
+	__vo uint32_t EMR;							/* 0x04 Event mask register */
+	__vo uint32_t RTSR;							/* 0x08 Rising trigger selection register */
+	__vo uint32_t FTSR;							/* 0x0C Falling trigger selection register */
+	__vo uint32_t SWIER;						/* 0x10 Software interrupt event register */
+	__vo uint32_t PR;							/* 0x14 Pending register */
+} EXTI_RegDef_t;
+
 /*
  * Peripheral definitions (Peripheral base address typecasted to xxx_RegDef_t)
  */
@@ -134,6 +144,8 @@ typedef struct
 #define GPIOI								((GPIO_RegDef_t*)GPIOI_BASEADDR)
 
 #define RCC									((RCC_RegDef_t*)RCC_BASEADDR)
+
+#define EXTI								((RCC_RegDef_t*)EXTI_BASEADDR)
 
 /*
  * Clock enable Macros for GPIOx peripherals

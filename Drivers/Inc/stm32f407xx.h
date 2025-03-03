@@ -129,6 +129,17 @@ typedef struct
 	__vo uint32_t PR;							/* 0x14 Pending register */
 } EXTI_RegDef_t;
 
+typedef struct
+{
+	__vo uint32_t MEMRMP;						/* 0x00 SYSCFG memory remap register */
+	__vo uint32_t PMC;							/* 0x04 SYSCFG peripheral mode configuration register */
+	__vo uint32_t EXTICR[4];					/* 0x08 SYSCFG external interrupt configuration registers */
+	uint32_t 	  RESERVED1[2];					/* 0x18 - 0x1C Reserved */
+	__vo uint32_t CMPCR;						/* 0x20 Compensation cell control register */
+	__vo uint32_t RESERVED;						/* 0x24 - 0x28 Reserved */
+	__vo uint32_t CFGR;							/* 0x2C */
+} SYSCFG_RegDef_t;
+
 /*
  * Peripheral definitions (Peripheral base address typecasted to xxx_RegDef_t)
  */

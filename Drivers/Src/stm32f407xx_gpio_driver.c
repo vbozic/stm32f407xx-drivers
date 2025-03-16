@@ -363,6 +363,28 @@ void GPIO_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi)
 	}
 }
 
+/*********************************************************************
+ * @fn      		  - GPIO_IRQPriorityConfig
+ *
+ * @brief             - Configure IRQ
+ *
+ * @param[in]         - IRQ number, must be unique
+ * @param[in]         - IRQ Priority
+ * @param[in]         - Enable or Disable
+ *
+ * @return            - none
+ *
+ * @Note              - none
+
+ */
+void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint8_t IRQPriority)
+{
+	// 1. Find out the IPR register
+	uint8_t iprx = IRQNumber / 4;
+	uint8_t iprx_section = IRQNumber % 4;
+
+	uint8_t shift_amount = ( 8 * iprx_section ) + ( 8 - NO_PR_BITS_IMPLEMENTED );
+	*(NVIC_PR_BASE_ADDR + (iprx * 4)) |= ( IRQPriority << shift_amount );
 }
 
 /*********************************************************************
